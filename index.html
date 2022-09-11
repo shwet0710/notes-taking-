@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <!-- meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Notes taking app</title>
-  </head>
-  <body>
-    <header class="bg-danger mb-5 p-5">
-        <div class="container">
-            <h1 class="bg-success text-primary text-center">ADD YOUR NOTES</h1>
-        </div>
-    </header>
-    <div class="container">
-        <div class="card card-body bg-light">
-            <h2 class="title text-info">Add notes using add button</h2>
-            <form class="form-inline mb-3">
-                <input id='tx' type="text" class="form-control mr-2"> 
-                <input id="bt" type="submit" value="Add" class="btn btn-danger"/>
+    <!-- title -->
+    <title>NOTES</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- heading -->
+        <a class="navbar-brand" href="#">NOTES</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <form class="form-inline my-2 my-lg-0">
+                <!-- search button -->
+                <input class="form-control mr-sm-2" id="searchNote" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
             </form>
-            <h2 class="title text-info">Your added notes appear below</h2>
-            <ul id="list" class="list-group">
-            </ul>
         </div>
+    </nav>
+
+    <!-- notes -->
+    <div class="container my-3">
+        <!-- heading -->
+        <h1>Welcome to NOTES!!!</h1>
+
+        <div class="card">
+            <div class="card-body">
+
+                <!-- add a title -->
+                <div class="form-group">
+                    <h5 class="card-title">Add a Title</h5>
+                    <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Title...">
+                </div>
+
+                <!-- add a note -->
+                <div class="form-group">
+                    <h5 class="card-title">Add a Note</h5>
+                    <textarea class="form-control" id="note" rows="3" placeholder="Note..."></textarea>
+                </div>
+                <button class="btn btn-primary" id="addBtn">Add a Note</button>
+            </div>
+        </div>
+
+        <hr><h1>Notes...</h1><hr>
+
+        <!-- notes -->
+        <div id="notes" class="row container-fluid"></div>
     </div>
-    <script src="./app.js"></script>
-    </body>
+
+    <!-- bootstrap js cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- script -->
+    <script src="script.js"></script>
+    
+</body>
+
 </html>
